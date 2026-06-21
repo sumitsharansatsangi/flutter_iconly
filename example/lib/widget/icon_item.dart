@@ -37,10 +37,10 @@ class _IconItemState extends State<IconItem> {
 
     final decoration = widget.selected
         ? BoxDecoration(
-            gradient: LinearGradient(colors: [scheme.primary, scheme.primaryVariant]),
+            gradient: LinearGradient(colors: [scheme.primary, scheme.primaryContainer]),
             boxShadow: [
               BoxShadow(
-                color: scheme.primaryVariant,
+                color: scheme.primaryContainer,
                 blurRadius: 8,
                 offset: const Offset(0, 4),
               ),
@@ -50,7 +50,7 @@ class _IconItemState extends State<IconItem> {
         : BoxDecoration(
             gradient: LinearGradient(colors: [scheme.onPrimary, Colors.grey[200]!]),
             border: Border.all(
-              color: scheme.primaryVariant.withOpacity(.3),
+              color: scheme.primaryContainer.withOpacity(.3),
               width: 1.8,
             ),
             borderRadius: BorderRadius.circular(18),
